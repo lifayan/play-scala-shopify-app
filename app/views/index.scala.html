@@ -1,0 +1,11 @@
+@import helper._
+
+@(domainForm: Form[ShopDomain])(implicit request: RequestHeader, messages: Messages)
+
+@main("Install the app!") {
+  @form(action = routes.HomeController.postDomainForm()) {
+    @CSRF.formField
+    @inputText(domainForm("shopName"))
+    <input id="submit_btn" name="submit_btn" type="submit" value="Submit" />
+  }
+}
