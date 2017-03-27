@@ -1,0 +1,9 @@
+@import helper._
+
+@(shop: silhouette.shopify.Shop)(implicit request: RequestHeader, messages: Messages)
+
+@main("You Have Logged In!") {
+<h1>Product app link!</h1>
+<h1>Shop Name: @shop.name</h1>
+<h2>Domain: @shop.myshopifyDomain</h2>
+}

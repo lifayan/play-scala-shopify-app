@@ -24,10 +24,7 @@ case class ShopDomain(shopName: String) {
 @Singleton
 class HomeController @Inject()(
   val messagesApi: MessagesApi,
-  silhouette: Silhouette[SessionEnv],
-  shopifyProvider: ShopifyProvider,
-  shopIdentityService: ShopIdentityService,
-  authInfoRepository: AuthInfoRepository
+  silhouette: Silhouette[SessionEnv]
 ) extends Controller with I18nSupport {
 
   val domainForm = Form(
